@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vieport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet"  href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>WebPage</title>
+</head>
+
+<body>
+    <nav>
+        <h3>Anna</h3>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <?php if(isset($user)) { ?>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            <?php } else { ?>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <?php } ?> 
+        </ul>
+    </nav>
